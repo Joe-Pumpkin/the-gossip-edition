@@ -1,0 +1,28 @@
+<h1>Voici les différents Gossips</h1>
+
+<div class="row">
+
+
+
+<% @gossips.each do |gossip| %>
+
+
+<div class="card mx-auto my-4 shadow" style="width: 22rem;">
+  <div class="card-body">
+
+    <h5 class="card-title"><h2> <%= gossip.title %> </h2></h5>
+
+    <h6 class="card-subtitle mb-2 text-muted">***</h6>
+
+    <p class="card-text"> <%= gossip.content %> </p>
+
+    <a href="<%= user_path(gossip.user.id) %>" class="btn btn-primary">Voir les infos</a>
+    
+  </div>
+</div>
+
+
+ <% end %>
+ 
+</div>
+</div>
